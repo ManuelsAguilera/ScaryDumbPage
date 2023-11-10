@@ -11,6 +11,8 @@
 </head>
 <div class="NotInPage" >
 
+    <div id="log">none</div>
+
     <div id="aboutus" class="box2">
         <p>Welcome to the new digital school!!<br>
             Where we promote <span style="color:red">FUN</span> and <span style="color:blue">LEARNING</span>
@@ -22,6 +24,10 @@
             <span style="color:rgb(255, 0, 120)"><a href="secret1.html">website</a></span>!
         </p>
     </div>
+
+    <div id="game1" class="box2">
+        <div id="ball"></div>
+    </div>
     
 </div>
 <body>
@@ -31,19 +37,45 @@
 
     <nav>
         <ul>
-            <li><button onclick="writeElem('aboutus')">About us!</button>
-            </li>
+            <button onclick="writeElem('aboutus')">About us!</button>
+            
+            <button onclick="writeElem('game1')">game1</button>
+            
         </ul>
     </nav>
-    
-
-    
-        <div  class="box1">
-            <div class="box2" id="writeElems">
-                <p>BLANK BOX</p>
-            </div>
+        
+    <div class="box1">
+        <div class=box2 id="writeElems">
+            <p>dsada</p>
         </div>
-    
+    </div>
     
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if the log element has the text "game1"
+        if (document.getElementById("log").innerText === "game1") {
+            const ball = document.getElementById('ball');
+            let ballSpeedX = 2;
+            let ballSpeedY = 2;
+
+            function update() {
+                console.log("update");
+                ball.style.left = parseInt(ball.style.left) + ballSpeedX + 'px';
+                ball.style.top = parseInt(ball.style.top) + ballSpeedY + 'px';
+
+                if (parseInt(ball.style.top) <= 0 || parseInt(ball.style.top) >= 280) {
+                    ballSpeedY = -ballSpeedY;
+                }
+
+                if (parseInt(ball.style.left) <= 0 || parseInt(ball.style.left) >= 380) {
+                    ballSpeedX = -ballSpeedX;
+                }
+            }
+
+            setInterval(update, 16); // Run the update function approximately every 16 milliseconds
+        }
+    });
+</script>
 </html>

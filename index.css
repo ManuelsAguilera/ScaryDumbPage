@@ -66,3 +66,30 @@ p
     padding:10%;
 }
 
+game1
+#game1 {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+#ball {
+    position: absolute;
+     width: 20px; 
+     height: 20px; 
+     background-color: red; 
+     border-radius: 50%; 
+     left: 190px; 
+     top: 140px;
+}
+
+#paddle {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: blue;
+    top: 110px;
+}
