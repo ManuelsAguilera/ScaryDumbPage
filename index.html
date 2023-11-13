@@ -6,7 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
+    <script >
+
+        // index.js
+        function writeElem(elementId) {
+            // Get the content of the specified element from elementos.html
+            var element = document.getElementById(elementId);
+            var div = document.getElementById("writeElems");
+            var log = document.getElementById("log");
+        
+            // Log the current element to the hidden log div
+            log.innerText =  elementId;
+        
+            console.log(log.innerHTML)
+            // Remove the current content of writeElems div
+        
+            while (div.firstChild != null)
+            {
+                div.removeChild(div.firstChild)
+            }
+        
+            // Append the new element to the writeElems div
+            div.append(element);
+        }
+        //pong
+        
+        </script>
     <title>Digital online school</title>
 </head>
 <div class="NotInPage" >
@@ -17,7 +42,10 @@
         <p>Welcome to the new digital school!!<br>
             Where we promote <span style="color:red">FUN</span> and <span style="color:blue">LEARNING</span>
             for people from all ages!!.</p>
-        <img src="fun.gif">
+        <div class="boxImg">
+            <img src="fun.gif">
+        </div>
+        
         <h2>You will have lots of fun playing our games</h2>
         <p>
             If you are a fan of challenges i suggest you pay real atention to this 
@@ -25,57 +53,42 @@
         </p>
     </div>
 
-    <div id="game1" class="box2">
-        <div id="ball"></div>
-    </div>
     
 </div>
 <body>
-    <div class="titleBox">
-        <h1 id="titulo" >Digital School</h1>
-    </div>
 
-    <nav>
-        <ul>
-            <button onclick="writeElem('aboutus')">About us!</button>
-            
-            <button onclick="writeElem('game1')">game1</button>
-            
-        </ul>
-    </nav>
-        
-    <div class="box1">
-        <div class=box2 id="writeElems">
-            <p>dsada</p>
+        <div class="titleBox">
+            <h1 id="titulo" >Digital School</h1>
+        </div>
+    
+    
+        <nav>
+            <ul>
+                <button onclick="writeElem('aboutus')">About us!</button>
+                
+                <a href = "pong.html"><button>game1</button></a>
+                
+            </ul>
+        </nav>
+        <div class="bg-icons">        
+        <div class="box1">
+            <div class=box2 id="writeElems">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Sit maxime sunt aliquam ratione quos nulla, exercitationem nihil, 
+                    quaerat eaque, dicta delectus iusto. Perferendis alias, iste unde 
+                    libero debitis neque maxime!Lorem ipsum <a href="https://github.com/ManuelsAguilera/manuelsaguilera.github.io">dolor</a>
+                     sit amet consectetur, adipisicing elit. 
+                    Sit maxime sunt aliquam ratione quos nulla, exercitationem nihil, 
+                    quaerat eaque, dicta delectus iusto. Perferendis alias, iste unde 
+                    libero debitis neque maxime!Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Sit maxime sunt aliquam ratione quos nulla, exercitationem nihil, 
+                    quaerat eaque, dicta delectus iusto. Perferendis alias, iste unde 
+                    libero debitis neque maxime!</p>
+            </div>
         </div>
     </div>
     
+    
 </body>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Check if the log element has the text "game1"
-        if (document.getElementById("log").innerText === "game1") {
-            const ball = document.getElementById('ball');
-            let ballSpeedX = 2;
-            let ballSpeedY = 2;
-
-            function update() {
-                console.log("update");
-                ball.style.left = parseInt(ball.style.left) + ballSpeedX + 'px';
-                ball.style.top = parseInt(ball.style.top) + ballSpeedY + 'px';
-
-                if (parseInt(ball.style.top) <= 0 || parseInt(ball.style.top) >= 280) {
-                    ballSpeedY = -ballSpeedY;
-                }
-
-                if (parseInt(ball.style.left) <= 0 || parseInt(ball.style.left) >= 380) {
-                    ballSpeedX = -ballSpeedX;
-                }
-            }
-
-            setInterval(update, 16); // Run the update function approximately every 16 milliseconds
-        }
-    });
-</script>
 </html>
