@@ -1,8 +1,12 @@
 body {
     margin:0;
     padding:0;
+    display: flex;
+    
+    flex-direction: column;
     background: linear-gradient(to left, rgba(255, 222, 33, 0.9), rgb(255, 100, 196));;
 }
+
 
 .bg-icons
 {
@@ -49,6 +53,28 @@ button
     color:rgba(200,200,255,1)
 }
 
+h1
+{
+    align-self: center;
+    margin:auto;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5em;
+    color: yellow;
+    text-shadow: 1px 1px 10px #4CAF50 ;
+}
+h2
+{
+    align-self: center;
+    margin:auto;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    color: green;
+    text-shadow: 1px 1px 10px yellow ;
+
+}
+
 p
 {
     font-family:cursive;
@@ -70,7 +96,7 @@ p
 
 .titleBox
 {
-    height: 200px; /* Adjust the height as needed */
+    
     background: linear-gradient(to right, #4CAF50, #2196F3); /* Adjust colors as needed */
     color: #ffffff; /* Set text color to contrast with the gradient */
     text-align: center;
@@ -82,6 +108,7 @@ p
     text-align:center;
     font-family:cursive;
     color:rgb(200,100,150);
+    text-shadow: 5px 5px 5px blue;
 
 }
 .box1
@@ -100,6 +127,8 @@ p
 .box2
 {
     display:flexbox;
+    align-items: center;
+    flex-direction: row;
     position:relative;
     padding:10%;
 }
