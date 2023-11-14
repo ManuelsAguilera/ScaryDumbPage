@@ -197,6 +197,7 @@ let Main = {
             
             //End game
             if(this.computer.score === 3 || this.player.score === 3) {
+                this._writeElem("secret"); 
                 if(this.computer.score === 3) {
                     this.over = true
                     setTimeout(function () { PongGame._endGame('Enemy'); }, 1000);
@@ -314,7 +315,7 @@ let Main = {
         this.ball.xMove = DIRECTION.RIGHT;
         this.ball.yMove = DIRECTION.UP;
         console.log("Finish")
-        this._writeElem("secret"); 
+        
         //If it is start - clear scores.
         if(this.round === 0) {
             winner.score = 0;
