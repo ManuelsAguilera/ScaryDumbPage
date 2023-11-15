@@ -6,32 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script >
-
-        // index.js
-        function writeElem(elementId) {
-            // Get the content of the specified element from elementos.html
-            var element = document.getElementById(elementId);
-            var div = document.getElementById("writeElems");
-            var log = document.getElementById("log");
+    <script src="index.js" ></script>  
         
-            // Log the current element to the hidden log div
-            log.innerText =  elementId;
-        
-            console.log(log.innerHTML)
-            // Remove the current content of writeElems div
-        
-            while (div.firstChild != null)
-            {
-                div.removeChild(div.firstChild)
-            }
-        
-            // Append the new element to the writeElems div
-            div.append(element);
-        }
-        //pong
-        
-        </script>
     <title>Digital online school</title>
 </head>
 <div class="NotInPage" >
@@ -53,6 +29,51 @@
         </p>
     </div>
 
+    <div id="fortheparents">
+        <h1>Are you a parent?</h1>
+        <h2>Educational content</h2>
+        <p>
+            In this webpage, you'll find games
+            and educational interactive experiencies.<br>
+            This games focus on making your child 
+            focus on the fun activities while learning about, 
+            traditional values of conduct, math, and a diverse 
+            range of different topics.
+            <br>
+        </p>
+        <h2>Why do we do it?</h2>
+        <p>We believe that god made us, to do good into the world.
+            As such the <span style ="color:red; font-style:italic;">
+                Traditional Church of Christ
+            </span> (TCC) made this 
+            wonderful project, in the hopes of fulifilling the wishes
+            of our lord and saviour.<br>
+        </p>
+        <h2>
+            What is the Traditional Chuch of Christ?
+        </h2>
+        <p>
+            Our church, is a modern aproach to the christian values,
+            most of us share. It was oficially founded around 1950. however our founder <span
+            style="color:purple; text-shadow: 1px 1px 10px yellow ;">
+            Saint Pedro de la torre</span> was already performing miracles around the end of
+            the tragedy at 1945.<br>
+            In a way this church was first created with the sole purpose of, ending forever
+            ballistic conflicts, and create peace to the world we live in. Our methods to
+            achieve so, are praying and absolute faith in order to create a grandiose world, for 
+            generations to come.
+            <br>
+            If you find yourself interested in us, you may wanna keep an eye
+            on the site bellow!
+        </p>
+
+        <div class="boxImg">
+            <a href="https://media.tenor.com/Ocjpm9kO5UUAAAAd/fnaf-five-nights-at-freddies.gif">
+                <img src="jesus.jpg">
+            </a>
+        </div>
+    </div>
+
     
 </div>
 <body>
@@ -67,6 +88,7 @@
                 <button onclick="writeElem('aboutus')">About us!</button>
                 
                 <a href = "pong.html"><button>game1</button></a>
+                <button onclick="writeElem('fortheparents')" > Are you parent</button>
                 
             </ul>
         </nav>
